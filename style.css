@@ -33,3 +33,19 @@ body {
     padding: 0 2rem;
     text-align: center;
 }
+
+.restart-btn {
+    display: none;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    padding: 0.4rem 1.3rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.restart-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
