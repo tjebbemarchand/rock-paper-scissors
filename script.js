@@ -68,7 +68,8 @@ function showWinner(winner, computerChoice) {
         result.innerHTML = `
             <h1 class="text-win">You win</h1>
             <i class="fas fa-hand-${computerChoice} fa-10x"></i>
-            <p>Computer chose <strong>${computerChoice}</strong></p>
+            <p>Computer chose <strong>${computerChoice.charAt(0).toUpperCase() +
+                computerChoice.slice(1)}</strong></p>
         `;
     } else if (winner === "computer") {
         // Increment computer score.
@@ -78,14 +79,16 @@ function showWinner(winner, computerChoice) {
         result.innerHTML = `
             <h1 class="text-lose">You lose</h1>
             <i class="fas fa-hand-${computerChoice} fa-10x"></i>
-            <p>Computer chose <strong>${computerChoice}</strong></p>
+            <p>Computer chose <strong>${computerChoice.charAt(0).toUpperCase() +
+                computerChoice.slice(1)}</strong></p>
         `;
     } else {
         // Show modal result.
         result.innerHTML = `
             <h1>Draw</h1>
             <i class="fas fa-hand-${computerChoice} fa-10x"></i>
-            <p>Computer chose <strong>${computerChoice}</strong></p>
+            <p>Computer chose <strong>${computerChoice.charAt(0).toUpperCase() +
+                computerChoice.slice(1)}</strong></p>
         `;
     }
 
