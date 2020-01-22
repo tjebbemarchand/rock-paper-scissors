@@ -43,6 +43,7 @@ body {
     cursor: pointer;
     border: none;
     outline: none;
+    margin-bottom: 1rem;
 }
 
 .restart-btn:hover {
