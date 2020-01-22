@@ -89,3 +89,9 @@ body {
 .choice:hover {
     color: var(--primary-color);
 }
+
+@media (max-width: 400px) {
+    .choices {
+        grid-template-columns: 1fr;
+    }
+}
