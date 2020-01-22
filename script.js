@@ -13,6 +13,9 @@ function playGame(e) {
     restart.style.display = "inline-block";
     const playerChoice = e.target.id;
     const computerChoice = getComputerChoice();
+    const winner = checkWinner(playerChoice, computerChoice);
+
+    console.log(playerChoice, computerChoice, winner);
 }
 
 // Computer choice.
@@ -24,7 +27,32 @@ function getComputerChoice() {
     } else if (rand === 2) {
         return "paper";
     } else {
-        return "scissor";
+        return "scissors";
+    }
+}
+
+// Check the winner.
+function checkWinner(playerChoice, computerChoice) {
+    if (playerChoice === computerChoice) {
+        return "draw";
+    } else if (playerChoice === "rock") {
+        if (computerChoice === "paper") {
+            return "computer";
+        } else {
+            return "player";
+        }
+    } else if (playerChoice === "paper") {
+        if (computerChoice === "scissors") {
+            return "computer";
+        } else {
+            return "player";
+        }
+    } else if (playerChoice === "scissors") {
+        if (computerChoice === "rock") {
+            return "computer";
+        } else {
+            return "player";
+        }
     }
 }
 
